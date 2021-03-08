@@ -21,6 +21,25 @@ namespace Metody03
         {
             return Math.Sqrt((a1 - b1) * (a1- b1) + (a2 - b2) *(a2 - b2));
         }
+        double mocnina(int a, int b)
+        {
+            double vysledek = 1;
+            if (b > 0)
+            {
+                for (int i = 0; i < b; i++)
+                {
+                    vysledek *= a;
+                }
+            }
+            else if (b < 0)
+            {
+                for (int i = 0; i > b; i--)
+                {
+                    vysledek /= a;
+                }
+            }
+            return vysledek;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -30,6 +49,10 @@ namespace Metody03
             double Yb = Convert.ToInt32(textBox4.Text);
 
             MessageBox.Show("Vzdalenost je "+ vzdalenost(Xa, Ya, Xb, Yb).ToString());
+
+            int a = Convert.ToInt32(textBox1.Text);
+            int b = Convert.ToInt32(textBox2.Text);
+            MessageBox.Show(mocnina(a, b).ToString());
 
         }
     }
