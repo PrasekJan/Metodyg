@@ -66,6 +66,12 @@ namespace Metody03
 
             double i = Convert.ToDouble(textBox1.Text);
             label1.Text = faktorial(i).ToString();
+
+            double soucin = 0;
+            double a = Int32.Parse(textBox1.Text);
+            double b = Int32.Parse(textBox2.Text);
+            soucin = a * b;
+            MessageBox.Show("Vysledek je "+soucin);
         }
     }
 }
