@@ -40,6 +40,16 @@ namespace Metody03
             }
             return vysledek;
         }
+        double faktorial(double i)
+        {
+            double vysledek = 1;
+            while (i > 0)
+            {
+                vysledek *= i;
+                i--;
+            }
+            return vysledek;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -54,6 +64,8 @@ namespace Metody03
             int b = Convert.ToInt32(textBox2.Text);
             MessageBox.Show(mocnina(a, b).ToString());
 
+            double i = Convert.ToDouble(textBox1.Text);
+            label1.Text = faktorial(i).ToString();
         }
     }
 }
